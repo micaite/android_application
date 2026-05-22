@@ -198,6 +198,22 @@ public class MainActivity extends AppCompatActivity {
         linijinioLinija.setDrawCircles(false);
 
         grafikas.setData(new LineData(anuitetoLinija, linijinioLinija));
+
+
+        grafikas.getXAxis().setPosition(com.github.mikephil.charting.components.XAxis.XAxisPosition.BOTTOM);
+        grafikas.getXAxis().setGranularity(1f);
+        grafikas.getXAxis().setLabelCount(6);
+
+
+        grafikas.getAxisLeft().setAxisMinimum(0f);
+        grafikas.getAxisRight().setEnabled(false);
+
+
+        grafikas.getDescription().setEnabled(false);
+        grafikas.setTouchEnabled(true);
+        grafikas.setPinchZoom(true);
+
+
         grafikas.invalidate();
         grafikas.setVisibility(View.VISIBLE);
     }
